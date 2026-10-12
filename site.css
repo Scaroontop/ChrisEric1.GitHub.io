@@ -1,0 +1,83 @@
+:root {
+  color-scheme: dark light;
+  --bg: #101218;
+  --surface: #1b1f2a;
+  --text: #eef2ff;
+  --muted: #b7bfd7;
+  --accent: #6ea8ff;
+  --border: #2e3447;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+}
+
+.site-header,
+.site-footer {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.noscript-message {
+  border-top: 1px solid var(--border);
+  margin: 1rem;
+  padding-top: 1rem;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .site-header h1 {
+    font-size: 1.4rem;
+  }
+}
